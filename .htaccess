@@ -1,0 +1,33 @@
+# BEGIN wikired iptv
+Options All -Indexes
+DirectoryIndex index.php 
+#
+<IfModule mod_rewrite.c>
+ # server version to force https
+ # 
+ # RewriteEngine On
+ # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+ # RewriteCond %{HTTPS} off
+ # RewriteCond %{HTTP:X-Forwarded-Port} !443
+ # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+ # RewriteBase /
+ # RewriteRule ^index\.php$ - [L]
+ # RewriteCond %{REQUEST_FILENAME} !-f
+ # RewriteCond %{REQUEST_FILENAME} !-d
+ # RewriteRule . /index.php [L]
+ # 
+ # wamp version to force http
+ # 
+ RewriteEngine On
+ # RewriteCond %{HTTPS} on
+ # RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ RewriteCond %{HTTPS} on
+ RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [L]
+</IfModule>
+#
+#SetEnv TZ America/Argentina/Buenos_Aires 
+php_value date.timezone 'America/Argentina/Buenos_Aires'
+php_value session.gc_maxlifetime 2592000
+php_value session.cache_expire 2592000
+php_value session.cookie_lifetime 2592000
+# END wikired

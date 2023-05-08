@@ -1,0 +1,53 @@
+[
+    {
+        "name": "wikired/wrcommon",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "D:/wamp64/Dropbox/dev/github/wrCommon",
+            "reference": "1364813c7c83457eac1f919a345943c0536162ca",
+            "shasum": null
+        },
+        "require": {
+            "php": "^7.1"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Wikired\\": "src/Wikired"
+            },
+            "files": [
+                "src/Wikired/wrFunctions.php"
+            ]
+        },
+        "autoload-dev": {
+            "psr-4": {
+                "Wikired\\": "src/Wikired"
+            },
+            "files": [
+                "src/Wikired/wrFunctions.php"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Luis Carrizo",
+                "email": "lcarrizo@wikired.com.ar",
+                "homepage": "http://dev.wikired.com.ar"
+            }
+        ],
+        "description": "Wikired Common foundation Library",
+        "homepage": "http://github.com/LuisCarrizo/wrCommon",
+        "keywords": [
+            "common",
+            "foundation"
+        ],
+        "transport-options": {
+            "symlink": true
+        }
+    }
+]
