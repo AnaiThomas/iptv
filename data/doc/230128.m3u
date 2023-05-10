@@ -1,0 +1,97 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--LS86.png" group-title="1.Aire",America NoAnda
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0053
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--LS86.png" group-title="1.Aire",America NoAnda
+https://stream01-xrolaglsgc.stackpathdns.com/video/BJQRNMF6b.m3u8
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI---A24.png" group-title="2.Noticias",A24 NoAnda
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0054
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VICRONIC.png" group-title="2.Noticias",Cronica NoAnda
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0039
+
+
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI---TVP.png" group-title="1.Aire",TV Pública
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0035
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--LS83.png" group-title="1.Aire",Canal 9
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0052
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VITELEFE.png" group-title="1.Aire",Telefe 
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0051
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--LS85.png" group-title="1.Aire",El Trece
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0050
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI----IP.png" group-title="1.Aire",IP
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0040
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--26TV.png" group-title="1.Aire",TierraMia
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0026
+
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI---C5N.png" group-title="2.Noticias",C5N
+plugin://plugin.video.youtube/play/?video_id=CO7ougR0GPY
+
+
+
+#EXTINF:0 tvg-logo="https://wikired.com.ar/__k0d1/png/VI----TN.png" group-title="2.Noticias",TN
+plugin://plugin.video.youtube/play/?video_id=O3bhL1gPdxM
+
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI--26TV.png" group-title="2.Noticias",Canal 26
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0047
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI----LN.png" group-title="2.Noticias",La Nación+
+plugin://plugin.video.youtube/play/?video_id=6_d4yYpCqsk
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI-NETTV.png" group-title="2.Noticias",NET TV
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0049
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI---TLX.png" group-title="2.Noticias",Telemax
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0048
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI----DW.png" group-title="2.Noticias",DW Español
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0015
+#EXTINF:-1 tvg-id="RTenEspanol.ru" tvg-logo="https://wikired.com.ar/__k0d1/png/Russia-today-logo.svg.png" group-title="2.Noticias",Rusia Today en Español
+https://rt-esp.rttv.com/live/rtesp/playlist.m3u8
+#EXTINF:-1 tvg-id="France24Espanol.fr" tvg-logo="https://wikired.com.ar/__k0d1/png/France24.png" group-title="2.Noticias",France 24
+https://hls.youtb.workers.dev/channel/UCUdOoVWuWmgo1wByzcsyKDQ.m3u8
+#EXTINF:-1 tvg-id="Telesur.ve" tvg-logo="https://wikired.com.ar/__k0d1/png/telesur.png" group-title="2.Noticias",teleSUR
+https://github.com/LaneSh4d0w/IPTV_Exception/raw/master/channels/ve/telesur.m3u8
+#EXTINF:-1 tvg-id="ElHistonautaTV.ar" tvg-logo="https://wikired.com.ar/__k0d1/png/histronauta.png" group-title="2.Noticias",El Histonauta
+https://stmv1.cnarlatam.com/elhistonauta/elhistonauta/playlist.m3u8
+#EXTINF:-1 tvg-id="PymesTeVe.us" tvg-logo="https://wikired.com.ar/__k0d1/png/pymesTV.png" group-title="2.Noticias",Pymes TV
+https://vse2-sa-all62.secdn.net/tvstartup6-channel/live/pymestv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VICRURAL.png" group-title="2.Noticias",Canal Rural 
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0010
+#EXTINF:-1 tvg-id="CGTNSpanish.cn" tvg-logo="https://wikired.com.ar/__k0d1/png/cgtn.png" group-title="2.Noticias",China Gobal Español
+https://livees.cgtn.com/1000e/prog_index.m3u8
+#EXTINF:-1 tvg-id="VPItv.ve" tvg-logo="https://wikired.com.ar/__k0d1/png/vpiTV.png" group-title="2.Noticias",Venezuela IPtv 
+https://ott3.streann.com/loadbalancer/services/public/channels/5d23d5882cdce61dae029fd8/playlist.m3u8
+
+#EXTINF:-1 tvg-id="https://wikired.com.ar/__k0d1/png/abcTV.png" tvg-logo="" group-title="3.Paraguay",ABC TV
+https://d2e809bgs49c6y.cloudfront.net/live/d87c2b7b-9ecf-4e6e-b63b-b32772bd7851/live.isml/d87c2b7b-9ecf-4e6e-b63b-b32772bd7851.m3u8
+#EXTINF:-1 tvg-id="C9N.py" tvg-logo="https://wikired.com.ar/__k0d1/png/c9npy.png" group-title="3.Paraguay",C9N 
+https://d4xunn272arip.cloudfront.net/hls/c9n.m3u8
+#EXTINF:-1 tvg-id="Nanduti.py" tvg-logo="https://wikired.com.ar/__k0d1/png/nanduti.png" group-title="3.Paraguay",Ñanduti TV
+https://tvdatta.com:3839/live/nandutitvlive.m3u8
+#EXTINF:-1 tvg-id="SNT.py" tvg-logo="https://wikired.com.ar/__k0d1/png/snt.png" group-title="3.Paraguay",SNT
+https://d4xunn272arip.cloudfront.net/hls/snt.m3u8
+#EXTINF:-1 tvg-id="Trece.py" tvg-logo="https://wikired.com.ar/__k0d1/png/trecePY.png" group-title="3.Paraguay",Trece [No 24x7]
+https://stream.rpc.com.py/live/trece.m3u8
+#EXTINF:-1 tvg-id="Unicanal.py" tvg-logo="https://wikired.com.ar/__k0d1/png/unicanal.png" group-title="3.Paraguay",Unicanal (720p) [No 24x7]
+http://45.55.127.106/live/unicanal_mid.m3u8
+#EXTINF:-1 tvg-id="TVAire.py" tvg-logo="https://wikired.com.ar/__k0d1/png/tvaPY.png" group-title="3.Paraguay",TV Aire
+https://59ce1298bfb98.streamlock.net/tvaire/tvaire/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://wikired.com.ar/__k0d1/png/VI-GENTV.png" group-title="4.Variedades",GenTV
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIAR0028
+#EXTINF:-1 tvg-id="HumorMax.ve" tvg-logo="https://wikired.com.ar/__k0d1/png/humormax.png" group-title="4.Variedades",Humor Max
+http://vcpar.myplaytv.com/humormax/live/playlist.m3u8
+#EXTINF:-1 tvg-id="RCNMas.co" tvg-logo="https://wikired.com.ar/__k0d1/png/rcn+.png" group-title="4.Variedades",RCN Más
+https://rcntv-rcnmas-1-us.plex.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="SoloStandUp.cl" tvg-logo="https://wikired.com.ar/__k0d1/png/solostandup.png" group-title="4.Variedades",SoloStandUp [No 24x7]
+https://paneltv.online:1936/8116/8116/playlist.m3u8
+#EXTINF:-1 tvg-id="SomosdelEste.py" tvg-logo="https://wikired.com.ar/__k0d1/png/cdeTV.png" group-title="4.Variedades",Somos Del Este
+https://59ce1298bfb98.streamlock.net/somosdeleste/somosdeleste/playlist.m3u8
+#EXTINF:-1 tvg-id="TopLatinoTV.pe" tvg-logo="https://wikired.com.ar/__k0d1/png/topLatino.png" group-title="4.Variedades",Top Latino
+https://5cefcbf58ba2e.streamlock.net:543/tltvweb/latintv.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TopLatinoTV.pe" tvg-logo="https://wikired.com.ar/__k0d1/png/americaSports.png" group-title="5.Deportes",America Sports
+plugin://plugin.video.youtube/play/?video_id=PD4awtTH58A
