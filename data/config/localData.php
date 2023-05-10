@@ -2,7 +2,7 @@
 
 $wr = array();
 
-$wr['uid']      =  8008;
+$wr['uid']      =  8002;
 $wr['name']     = 'DP Procesos Automaticos';
 $wr['email']    = 'dp.wikired.com.ar';
 $wr['avatar']   = 'https://dp.wikired.com.ar/data/res/img/user.png';

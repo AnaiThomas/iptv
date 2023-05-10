@@ -1,6 +1,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
-use \Wikired\wrDB as wrDB;
+// use \Wikired\wrDB as wrDB;
 
 $head = array(
   'title' => 'Canales de IPTV',
@@ -66,8 +66,6 @@ $_navbar_custom = array(
 
   <?php
   include INC . 'body_header.php';
-  include INC . 'ee/b05.php'; //ojo ver si es necesario
-  
   ?>
 
   <main role="main" id="mainContainer"> <!-- class="mt-5 pt-5" -->
@@ -83,13 +81,10 @@ $_navbar_custom = array(
   <footer>
 
     <script type="text/javascript" language="javascript" class="footer">
-      let dataSource = 'f0591';
+      let dataSource = 'f0311';
     </script>
 
     <?php include INC . 'body_footer.php'; ?>
-
-    <script type="text/javascript" language="javascript" class="footer">
-    </script>
 
   </footer>
 
