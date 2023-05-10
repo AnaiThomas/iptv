@@ -1,0 +1,869 @@
+/****************************************************************************
+//  master.css
+/****************************************************************************/
+
+/* agregados en 2020-10 para Seguimiento de Expedientes */
+.wrCol {
+  padding-left  : 5px !important;
+  padding-right : 5px !important;
+  text-align    : center !important;
+}
+.wrCol2 {
+  padding-left  : 5px !important;
+  padding-right : 5px !important;
+}
+.wrColR {
+  padding-left  : 5px !important;
+  padding-right : 5px !important;
+  text-align    : right !important;
+}
+.wrLabel {
+  text-align  : center !important;
+  white-space : nowrap !important;
+  font-size   : 10px !important;
+}
+
+.f3Hide {
+  display: none;
+}
+
+
+/* agregados en 2020-09 para pivot tables */
+
+.popover {
+  border: 2px dotted red;
+  min-width: 40% !important;
+}
+.popover-header {
+  background-color: #C6C9C1;
+  color: red;
+  text-align:center;
+}
+
+
+/* agregados en Mayo de 2020 para templates */
+
+#avatarDropdown {
+  padding: 0 !important;
+  border: hidden !important;
+}
+
+#avatarDropdown:hover {
+  border: hidden !important;
+  font-style: normal !important;
+  font-weight: normal  !important;
+}
+
+.wrDropdown-menu{
+  background-color: #4267B2 !important;
+  /*font-size: 0.75em !important;*/
+} 
+.wrDropdown-item{
+  background-color: #4267B2 !important;
+  /*font-size: 0.75em !important;*/
+} 
+
+.wrDropdown-item:hover, .wrDropdown-item:focus {
+  color: #FEFF31 !important;
+  /*text-decoration: none;*/
+  background-color: transparent !important;
+} 
+
+/* agregados en abril de 2020 para Metas */
+.form-check-input:disabled ~ .form-check-label {
+  color: #2C2B2B !important;
+}
+
+.colorMI {
+  color: #1B335F !important;
+}
+
+.colorPesos {
+  color: #FDB00C !important;
+}
+.colorDolares{
+  color: #40BE5C !important;
+}
+/* agregados el 2020-02-12 */
+
+  #pivotTable {
+    /*height: calc(100vh - 100px);*/
+    min-height: calc(100vh - 75px);
+  }
+  #cbEjercicio , 
+  #cbAlcance   ,
+  #cbJurisdiccion {
+    padding-top   : 2px !important;
+    padding-bottom: 2px !important;
+    height        : 28px !important;
+  }
+  .btn-outline-custom {
+    color: #1B335F !important;
+    border-color: #1B335F !important;
+  }
+
+  .btn-outline-custom:hover {
+    color: white !important;
+    background-color: #1B335F !important;
+    border-color: #1B335F !important;
+  }
+
+/*  .btn-outline-custom:focus, .btn-outline-custom.focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }*/
+
+  .btn-outline-custom.disabled, .btn-outline-custom:disabled {
+/*    color: #1B335F !important;
+    background-color: transparent;*/
+    display:none !important;
+  }
+/*
+  .btn-outline-custom:not(:disabled):not(.disabled):active, .btn-outline-custom:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-custom.dropdown-toggle {
+    color: white !important;
+    background-color: #1B335F !important;
+    border-color: #1B335F !important;
+  }
+
+  .btn-outline-custom:not(:disabled):not(.disabled):active:focus, .btn-outline-custom:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-custom.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+*/
+
+  .card {
+    font-size: 14px !important;
+  }
+  .display-4 {
+    font-size: 36px !important;
+    color: #4267B2 !important;
+  }
+  .lead {
+    font-size: 16px !important;
+  }
+  .navbar-brand {
+    font-size: 16px !important;
+  }
+  .nav-link {
+    font-size: 14px !important;
+  }
+  .back-to-main {
+    position: fixed;
+    right: 15px;
+    top: 54px;
+    /*display: none;*/
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 45px; 
+  }
+  .back-to-main:focus, .back-to-main:hover {
+    color: white; 
+  }
+  .back-to-main:hover {
+    background: #343a40; 
+  }
+  .back-to-main i {
+    font-weight: 800; 
+  }
+  .mb-0 > a {
+    display: block;
+    position: relative;
+  }
+  .mb-0 > a:before {
+    content: "\f055"; /* fa-chevron-down \f078*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /*position: absolute;*/
+    /*right: 0;*/
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mb-0 > a[aria-expanded="true"]:before {
+    content: "\f056"; /* fa-chevron-up \f077*/
+  }
+
+  /*.mb-0 > a {
+    display: block;
+    position: relative;
+  }*/
+  .mb-0 > button:before {
+    content: "\f055"; /* fa-chevron-down \f078*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /*position: absolute;*/
+    /*right: 0;*/
+
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mb-0 > button[aria-expanded="true"]:before {
+    content: "\f056"; /* fa-chevron-up \f077*/
+  }
+
+  .tb_red {
+    color: red !important;
+  }
+  .tb_yellow {
+    color: #ffff00 !important;
+  }
+  .tb_green {
+    color: #00cc00 !important;
+  }
+  .tb_black {
+    color: black !important;
+  }
+  .tb_blue {
+    color: #0066ff !important;
+  }
+  .tb_orange {
+    color: #ff9900 !important;
+  }
+
+  #wdr-toolbar-wrapper #wdr-toolbar,
+  #wdr-toolbar-wrapper #wdr-toolbar div,
+  #wdr-toolbar-wrapper #wdr-toolbar span {
+    font-size: 12px  !important;
+    color    : #000  !important;
+
+  }
+
+  #wdr-toolbar-wrapper {
+    height: 45px !important;
+  }
+
+  #wdr-toolbar-wrapper #wdr-toolbar a {
+    height:  40px !important;
+  }
+
+  #wdr-toolbar-wrapper #wdr-toolbar > li > a div.wdr-svg-icon,
+  #wdr-toolbar-wrapper #wdr-toolbar > .wdr-toolbar-group-right > li > a div.wdr-svg-icon {
+    position: absolute;
+    text-align: center;
+    /*bottom: 30px;*/
+    width: 100%;
+  }
+  #wdr-toolbar-wrapper #wdr-toolbar > li > a span,
+  #wdr-toolbar-wrapper #wdr-toolbar > .wdr-toolbar-group-right > li > a span {
+    top: 22px !important;
+  }
+
+  .tbIcon {
+    font-size  : 18px  !important;
+    color      : #000   !important;
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight:900 !important;
+  }
+
+  .tbProIcon {
+    font-size  : 18px  !important;
+    color      : #000   !important;
+    font-family: "Font Awesome 5 Pro" !important;
+    font-weight:900 !important;
+  }
+
+/* agregados el 2019-03-29 */
+.c3-line {
+    stroke-width: 3px !important;
+} 
+.overflow {
+  height: 70vh;
+}
+.ui-selectmenu-optgroup {
+  display: block !important;
+  margin: 10px 0 0 0 !important;
+  font-weight: bold !important;
+  font-style: italic !important;
+  font-variant: small-caps !important;
+  font-size: 1.5em !important;
+  text-align: center;
+}
+main {
+  margin-top: 68px !important;
+}
+
+.c3-selected-circle {
+  fill: #49499E !important;
+}
+.ui-widget {
+  font-size: 0.75em !important;
+}
+
+.ui-slider-handle {
+  width: 4.25em !important;    /*3.5em*/
+  height: 1.6em !important;
+  top: 50% !important;
+  margin-top: -.8em !important;
+  text-align: center !important;
+  line-height: 1.6em !important;
+  background-color: #1B335F !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border: 1px solid #003eff;
+  /*background: #1B335F !important;   original ver donde se usaba modificado el 20191227*/
+  background: #4267B2 !important;
+
+  /*font-weight: normal;*/
+  /*color: #ffffff;*/
+  /*color: white !important;            modifcado el 2020-02-21*/
+  color: yellow !important;            /*modifcado el 2020-02-21*/
+  font-weight: bold !important;
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+  /*color: #454545;*/
+  color:red;
+  text-decoration: none;
+}
+
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+  /*border: #003eff;*/
+  border: red !important;
+  background-color: #ffffff;
+}
+
+  /*
+  .ui-icon-background, .ui-state-active .ui-icon-background {
+    border:white;
+  }
+  .ui-checkboxradio-checked {
+    background-color: #45D727 !important;
+    background-color: #45D727 !important;
+  }
+  */
+
+  .slider.slider-horizontal {
+    width: 80% !important;
+    /*height: 20px;*/
+    height: 30px !important;
+    background: #BABABA;
+    /*display:none;*/
+  }
+
+  .wrCard {
+    /*
+    border: 1px solid ;
+    border-color: #4267B2;
+    margin: 0.5rem !important ;
+    */
+  }
+
+  .wrCardHeader {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-align: center !important;      
+  }
+
+  .wrCardHeaderA {
+    font-family: "Open Sans","Arial Narrow",sans-serif;
+    font-size: 16px !important;
+    color: #2C2825 !important;
+    font-weight: bold;
+  }
+
+  .wrCardHeaderB {
+    font-family: "Open Sans","Arial Narrow",sans-serif;
+    font-size: 12px !important;
+    color: #2C2825 !important;
+    /*font-weight: bold;*/
+    font-style: italic;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
+  .wrCardHeaderC, .wrCardHeaderC2  {
+    font-family: "Open Sans","Arial Narrow",sans-serif;
+    font-size: 28px !important;
+    color: #2C2825 ;
+    font-weight: bold;
+    /*font-style: italic;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
+  .wrCardHeaderD {
+    font-family: "Open Sans","Arial Narrow",sans-serif;
+    font-size: 14px !important;
+    /*text-align: center !important;*/
+    /*justify-content: space-between;*/
+
+    color: #2C2825 !important;
+    font-weight: bold;
+    /*font-style: italic;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
+  .wrCardValues {
+    font-size: 11px ;
+    color: #2C2825 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-width: 1px 0px;
+    /*border-bottom-width: 1px;*/
+    border-style: solid;
+    border--color: #4267B2;
+  }
+
+  .wrCardValueX , .wrCardValueY {
+    
+  }
+
+  .wrCardValueX {
+    
+  }
+
+  .wrCardValueW {
+    border-left-width: 1px !important;
+    border-left-style: dotted !important;
+    border-left-color: #4267B2 !important;
+  }
+
+  .wrCardValueZ {
+    font-size: 10px !important;
+  }
+
+  .fs8 {font-size:  8px !important;}
+  .fs10 {font-size: 10px !important;}
+  .fs12 {font-size: 12px !important;}
+  .fs14 {font-size: 14px !important;}
+  .fs16 {font-size: 16px !important;}
+  .fs18 {font-size: 18px !important;}
+  .fs20 {font-size: 20px !important;}
+  .fs24 {font-size: 24px !important;}
+  .fs36 {font-size: 36px !important;}
+  .fs48 {font-size: 48px !important;}
+  .fs56 {font-size: 56px !important;}
+  .fs64 {font-size: 64px !important;}
+  .fs72 {font-size: 72px !important;}
+
+  .bold {font-weight: bold !important;}
+
+  .red{
+    color: red !important;
+  }
+  .wrHider {
+    /*display:none !important;*/
+    display:none ;
+  }
+
+  .placeholder_full {
+    height:80%;  
+    width:100%;
+    min-height:50vh;
+    min-width:60vw;
+  }
+  .placeholder_x3 {
+    /*
+    height:100%;  
+    width:100%;
+    min-height:60vh;
+    min-width:32vw;*/
+  }
+
+
+
+/* fin agregado 2019-03-29 */
+
+/* Revisar !!!! */
+.card-body {
+  padding: 0px !important;
+}
+.content-wrapper {
+  margin-left: 0  !important;;
+}
+@media (min-width: 992px) {
+  .content-wrapper {
+    margin-left: 0 !important;; } }
+@media (min-width: 992px) {
+  body.sidenav-toggled .content-wrapper {
+    margin-left: 0 !important;; } }
+
+.demo-placeholder {
+  height:40vh;  
+  width:20vw;
+}
+
+
+/**
+***  Navbar
+**/
+a.nav-link:hover {
+  text-decoration: none;
+  font-style: italic;
+  color: #F2F707FF !important;
+}
+.navbar-brand  a , .navbar-brand  span , .navbar-collapse a {
+	color: white !important;
+}
+.custom-toggler.navbar-toggler {
+	 border-color: white !important;
+	 color: white !important;
+	 font-weight: bold !important;
+}
+@media (min-width: 1024px) {
+	.navbar .navbar-nav {
+		/*
+		display: inline-block;
+		float: none;
+		*/
+	}
+	.navbar .navbar-collapse {
+	   /*text-align: center;*/
+	}
+}
+
+/**
+*** checkbox toggler
+**/
+input[type="radio"]:checked+label{ font-weight: bold; } 
+/* 
+	Bootstrap Toggle v2.2.2 corrections for Bootsrtap 4
+*/
+.toggle-off {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.toggle.off {
+    border-color: rgba(0, 0, 0, .25);
+}
+.toggle-handle {
+    background-color: white;
+    border: thin rgba(0, 0, 0, .25) solid;
+}
+
+
+/**
+*** controles generales
+**/
+
+#wrJumbotron {
+ padding-top: 1em !important;
+ padding-botton: 1em !important;
+}
+
+.wrBkgSelect{
+  /*background-color: #6390B2 !important;*/
+  background-color: #4267B2 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+}   
+
+.wrBkg{
+	/*background-color: #6390B2 !important;*/
+	background-color: #4267B2 !important;
+}   
+.wrLight {
+	color: white !important;
+	font-weight: bold !important;
+}
+.wrBtnBkg{
+	background-color: #1B335F !important;
+}
+.wrH2 {
+  color: white;
+  font-weight: bold;
+}
+.wrCardBkg {
+	 background: #1B335F; 
+	 /*color: #FFFFFF;*/
+}
+
+.wrCardBkg:focus {
+   font-weight:bold;
+ }
+
+.wrCardBkg:hover  {
+ background: #165877; 
+ font-weight:bold;
+ text-decoration:none;
+ cursor:pointer;
+}
+
+.wrCardA {
+ color: #FFFFFF !important ;
+ font-weight: bold !important ;
+}
+
+.wrBadge {
+	/*background-color: #FFFF35FF;
+	color: #00137FFF;*/
+	background-color: #0CAFAE;
+	color: #FFFFFF;
+	font-weight: bold;
+  font-size: 8px !important;
+}
+
+
+#procesando {
+  position: fixed;
+  top: 50% !important; 
+  left: 50% !important;
+  width: 100px;
+  height: 2rem;
+  z-index: 99999;
+  display: none;
+} 
+
+.ControlInvisible
+{
+display: none;
+}
+.ControlVisible
+{
+display: block;
+}
+
+.wrSidebar {
+    background-color: #ddd;
+    float: left;
+    width: 100%;
+    height: 2.5rem;
+    position: fixed;
+     /*padding-bottom: : 2.5rem;*/
+}
+.wrContent {
+     padding-top:  3rem;
+}
+
+
+pre.log1 {font-size: 0.75em;padding:3px; box-sizing:border-box; -moz-box-sizing:border-box; webkit-box-sizing:border-box;
+ display:block;  white-space: pre-wrap;   white-space: -moz-pre;  white-space: -pre-wrap;  white-space: -o-pre-wrap; 
+ word-wrap: normal ; word-break: keep-all;width:100%; overflow-x:auto;}
+pre.log2 { box-sizing:border-box; -moz-box-sizing:border-box; webkit-box-sizing:border-box;
+ display:block;  white-space: pre-wrap;   white-space: -moz-pre;  white-space: -pre-wrap;  white-space: -o-pre-wrap; 
+ word-wrap: normal ; word-break: keep-all;width:100%; overflow-x:auto;}
+pre.wrne3 { background-color: transparent;border-style: none;text-align: left;font-size: 1em;padding:0;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;} 
+
+.wrTooltip {
+    background: #FFFF74FF;
+    color: black;
+    border: none;
+    padding: 0;
+    opacity: 1;
+}
+
+.wrTooltipInfo {
+    background: #FFFF74FF;
+    color: black;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    width: 500px;
+    max-width: 500px;
+}
+.ui-tooltip {
+ background: #FFFFB6;
+ border: 2px solid white;
+}
+
+.jt-Right {
+ text-align: right;
+}
+
+.jt-Center {
+ text-align: center;
+}
+
+.jt-Bold {
+ font-weight: bold;
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 3px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px; }
+  .scroll-to-top:focus, .scroll-to-top:hover {
+    color: white; }
+  .scroll-to-top:hover {
+    background: #343a40; }
+  .scroll-to-top i {
+    font-weight: 800; }
+
+/** 
+*** wr Modal working area 
+**/
+
+.wrModal {
+  position: fixed;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.wrModal-dialog {
+  position: fixed;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}   
+
+/* 
+*** bs modal fullscreen 
+*/
+
+/*
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+.modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;  
+  padding: 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid #3c7dcf;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  padding: 10px;
+  background: #6598d9;
+  border: 0;
+}
+
+.modal-title {
+  font-weight: 300;
+  font-size: 2em;
+  color: #fff;
+  line-height: 30px;
+}
+
+.modal-body {
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  width: 100%;
+  font-weight: 300;
+  overflow: auto;
+}
+
+.modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 10px;
+  background: #f1f3f5;
+}
+
+*/
+
+.modal2 {
+  position: fixed;
+  top: 1%;
+  /*right: 0;*/
+  /*bottom: 0;*/
+  left: 25%;
+  overflow: hidden;
+}
+
+.modal-dialog2 {
+  position: fixed;
+  margin: 0;
+  width: 50%;
+  height: 90%;
+  max-width: 100%;  
+  padding: 0;
+}
+
+.modal3 {
+  position: fixed;
+  top: 10%;
+  /*right: 0;*/
+  /*bottom: 0;*/
+  left: 30%;
+  overflow: hidden;
+}
+
+.modal-dialog3 {
+  position: fixed;
+  margin: 0;
+  width: 40%;
+  height: 60%;
+  max-width: 100%;  
+  padding: 0;
+}
+
+.modal-center {
+  text-align: center;
+}
+
+.datepicker-container{
+  text-align:center;
+}
+.datepicker-center{
+  display:inline-block;
+  margin:0 auto;
+}
+
+
+
+
+/*ancho del selector de indicador*/
+
+.ui-selectmenu-button.ui-button {
+  width: 20em !important;
+}

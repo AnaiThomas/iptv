@@ -68,7 +68,7 @@
         <a  class="navbar-brand" href="/index.php">
           <i class="fas fa-home"></i>
         </a>
-        <span class="font-weight-bold font-italic " >Portal de Presupuesto Secretaría de Energia</span>
+        <span class="font-weight-bold font-italic " >IPTV Chanels</span>
       </div>	
 		</nav>
 	</header>

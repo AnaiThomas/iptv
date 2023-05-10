@@ -23,6 +23,12 @@ DirectoryIndex index.php
  # RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
  RewriteCond %{HTTPS} on
  RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [L]
+ RewriteBase /
+ RewriteRule ^index\.php$ - [L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+#  RewriteRule . /index.php [L]
+RewriteRule . /include/pageError.php [L]
 </IfModule>
 #
 #SetEnv TZ America/Argentina/Buenos_Aires 

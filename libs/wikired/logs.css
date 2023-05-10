@@ -1,0 +1,173 @@
+/* elements */
+pre{
+	margin:0 !important;
+}
+
+pre.log1 {font-size: 0.75em;padding:3px; box-sizing:border-box; -moz-box-sizing:border-box; webkit-box-sizing:border-box;
+ display:block;  white-space: pre-wrap;   white-space: -moz-pre;  white-space: -pre-wrap;  white-space: -o-pre-wrap; 
+ word-wrap: normal ; word-break: keep-all;width:100%; overflow-x:auto;}
+ 
+pre.log2 { 
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	webkit-box-sizing:border-box;
+   white-space: pre-wrap;   
+   white-space: -moz-pre;  
+   white-space: -pre-wrap;  
+   white-space: -o-pre-wrap; 
+   word-wrap: normal ; 
+   word-break: keep-all;
+   display:block;  
+   width:100%; 
+   overflow:auto !important;}
+
+ .tabDiv {
+ 	overflow:auto!important;
+ }
+
+.tb_red {
+	color: red !important;
+}
+.tb_yellow {
+	color: #ffff00 !important;
+}
+.tb_green {
+	color: #00cc00 !important;
+}
+.tb_black {
+	color: black !important;
+}
+.tb_blue {
+	color: #0066ff !important;
+}
+.tb_orange {
+	color: #ff9900 !important;
+}
+
+/* by ID */
+#tabs .scroller { 
+border: 1px solid #D4CCB0; 
+border-radius: 6px; 
+overflow-y:hidden;
+} 
+
+#tabs ul { 
+width: 100%;
+border: 0; 
+}
+
+/* overrides */
+.ui-tabs-panel {  
+	/*height: 485px; width: 100%; overflow: hide !important ;*/
+	/*height: 550px; */
+	height: 85vh; 
+	width: 100%; 
+	/*overflow: hide !important ;*/
+	overflow: auto !important ;
+}
+
+.ui-tabs .ui-tabs-panel {
+	padding:0 !important;
+}
+
+/* to make lower tab-nav's header  */
+.ui-tabs-anchor{
+padding: .25em .5em !important;
+line-height: 1em !important;
+font-size: 12px !important;
+}
+
+
+/*tooltip width*/
+.ui-tooltip{
+min-width: 200px;
+max-width: 800px;
+}
+
+/* context menu for jsTree */
+.vakata-context { 
+z-index: 9999 !important;
+}
+
+/* toolbar font size */
+.w2ui-reset table tr td{
+font-size:14px !important;
+}
+
+/* form columns */
+.w2ui-reset input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]),
+.w2ui-reset select,
+.w2ui-reset textarea {
+min-width: 100% !important;
+width: 100% !important;
+}
+.w2ui-column {
+width: 100% !important;
+}
+
+/* new classes */
+
+.bgError{
+	background-color: #ff8080;
+}
+.bgOk {
+	background-color: #99e699;
+}
+.bgNormal {
+	background-color: transparent;
+}
+
+/* beta version */
+
+/* badge */
+#proj_name {
+font-size: 14px !important;
+}
+
+div.badge {
+display: inline-block;
+border-radius: .75em;
+font-family: 'Dejavu Sans','Arial';
+}
+div.badge div {
+display: inline-block;
+float: left;
+/*text-transform: lowercase;*/
+color: #FFF;
+text-shadow: 0px .1em 0px rgba(0, 0, 0, 0.5);
+margin: 0;
+padding: 0;
+border: 0;
+}
+div.badge div:first-child, div.badge div:first-child span {
+border-top-left-radius: .25em;
+border-bottom-left-radius: .25em;
+}
+div.badge div:last-child, div.badge div:last-child span {
+border-top-right-radius: .25em;
+border-bottom-right-radius: .25em;
+}
+div.badge div span {
+display: inline-block;
+background: linear-gradient(180deg, rgba(187, 187, 187, .1) 0%, rgba(0, 0, 0, .1) 100%);
+padding: .25em .5em;
+box-sizing: border-box;
+}
+.badge .name {
+background: #555555;
+}
+.badge .status.green {
+background: #44cc11;
+}
+.badge .status.yellow {
+background: #ddcc00;
+}
+.badge .status.blue {
+background: #00aadd;
+}
+.badge .status.red {
+background: #cc1100;
+}
+.badge .status.gray {
+background: #cccccc;
+}
