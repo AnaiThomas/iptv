@@ -209,3 +209,61 @@ Stack trace:
 [10-May-2023 09:43:21 America/Argentina/Buenos_Aires] PHP Warning:  include(): Failed opening 'C:/dev/web/iptv/include/ee/b05.php' for inclusion (include_path='.;C:\php\pear') in C:\dev\web\iptv\index.php on line 69
 [10-May-2023 09:43:21 America/Argentina/Buenos_Aires] PHP Stack trace:
 [10-May-2023 09:43:21 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\index.php:0
+[13-May-2023 11:38:26 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: hasData in D:\0.dev\web\iptv\ajax\crud03.php on line 45
+[13-May-2023 11:38:26 America/Argentina/Buenos_Aires] PHP Stack trace:
+[13-May-2023 11:38:26 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[13-May-2023 11:40:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Wikired\wrDB' not found in D:\0.dev\web\iptv\ajax\crud03.php:188
+Stack trace:
+#0 {main}
+  thrown in D:\0.dev\web\iptv\ajax\crud03.php on line 188
+[13-May-2023 11:43:42 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: show in D:\0.dev\web\iptv\ajax\crud03.php on line 275
+[13-May-2023 11:43:42 America/Argentina/Buenos_Aires] PHP Stack trace:
+[13-May-2023 11:43:42 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[13-May-2023 12:55:15 America/Argentina/Buenos_Aires] DB Error  Tabla 'wikiredc_iptv.grupo' no existe
+[13-May-2023 12:55:15 America/Argentina/Buenos_Aires] DB Error  SELECT id,nombre FROM grupo nombre 
+[13-May-2023 12:55:15 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[13-May-2023 12:55:15 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Wikired\wrCommonFoundation' not found in D:\0.dev\web\iptv\vendor\wikired\wrDB.php:174
+Stack trace:
+#0 D:\0.dev\web\iptv\vendor\wikired\wrDB.php(578): Wikired\wrDB->log_db_errors('Tabla 'wikiredc...', 'SELECT id,nombr...')
+#1 D:\0.dev\web\iptv\ajax\crud03.php(228): Wikired\wrDB->get_results('SELECT id,nombr...', 0)
+#2 {main}
+  thrown in D:\0.dev\web\iptv\vendor\wikired\wrDB.php on line 174
+[13-May-2023 12:56:38 America/Argentina/Buenos_Aires] DB Error  Tabla 'wikiredc_iptv.grupo' no existe
+[13-May-2023 12:56:38 America/Argentina/Buenos_Aires] DB Error  SELECT id,nombre FROM grupo nombre 
+[13-May-2023 12:56:38 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[13-May-2023 12:56:38 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Wikired\wrCommonFoundation' not found in D:\0.dev\web\iptv\vendor\wikired\wrDB.php:174
+Stack trace:
+#0 D:\0.dev\web\iptv\vendor\wikired\wrDB.php(578): Wikired\wrDB->log_db_errors('Tabla 'wikiredc...', 'SELECT id,nombr...')
+#1 D:\0.dev\web\iptv\ajax\crud03.php(228): Wikired\wrDB->get_results('SELECT id,nombr...', 0)
+#2 {main}
+  thrown in D:\0.dev\web\iptv\vendor\wikired\wrDB.php on line 174
+[13-May-2023 12:59:25 America/Argentina/Buenos_Aires] DB Error  Tabla 'wikiredc_iptv.grupo' no existe
+[13-May-2023 12:59:25 America/Argentina/Buenos_Aires] DB Error  SELECT id,nombre FROM grupo nombre 
+[13-May-2023 12:59:25 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[13-May-2023 12:59:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Wikired\wrCommonFoundation' not found in D:\0.dev\web\iptv\vendor\wikired\wrDB.php:174
+Stack trace:
+#0 D:\0.dev\web\iptv\vendor\wikired\wrDB.php(578): Wikired\wrDB->log_db_errors('Tabla 'wikiredc...', 'SELECT id,nombr...')
+#1 D:\0.dev\web\iptv\ajax\crud03.php(228): Wikired\wrDB->get_results('SELECT id,nombr...', 0)
+#2 {main}
+  thrown in D:\0.dev\web\iptv\vendor\wikired\wrDB.php on line 174
+[13-May-2023 13:00:25 America/Argentina/Buenos_Aires] DB Error  Tabla 'wikiredc_iptv.grupo' no existe
+[13-May-2023 13:00:25 America/Argentina/Buenos_Aires] DB Error  SELECT id,nombre FROM grupo nombre 
+[13-May-2023 13:00:25 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[13-May-2023 13:00:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Class 'Wikired\wrCommonFoundation' not found in D:\0.dev\web\iptv\vendor\wikired\wrDB.php:174
+Stack trace:
+#0 D:\0.dev\web\iptv\vendor\wikired\wrDB.php(578): Wikired\wrDB->log_db_errors('Tabla 'wikiredc...', 'SELECT id,nombr...')
+#1 D:\0.dev\web\iptv\ajax\crud03.php(228): Wikired\wrDB->get_results('SELECT id,nombr...', 0)
+#2 {main}
+  thrown in D:\0.dev\web\iptv\vendor\wikired\wrDB.php on line 174
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] DB Error  Tabla 'wikiredc_iptv.grupo' no existe
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] DB Error  SELECT id,nombre FROM grupo nombre 
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP Warning:  Invalid argument supplied for foreach() in D:\0.dev\web\iptv\ajax\crud03.php on line 233
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP Stack trace:
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: show in D:\0.dev\web\iptv\ajax\crud03.php on line 274
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP Stack trace:
+[13-May-2023 13:04:32 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[13-May-2023 13:08:29 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: show in D:\0.dev\web\iptv\ajax\crud03.php on line 274
+[13-May-2023 13:08:29 America/Argentina/Buenos_Aires] PHP Stack trace:
+[13-May-2023 13:08:29 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0

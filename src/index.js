@@ -1,5 +1,5 @@
 /*
-*   p0590 &  p0591  js logic
+*   index.php logic
 */
 
 // global variables
@@ -17,23 +17,8 @@ async function documentReady(){
     moment.locale('es-us');
 
     // get optionList
-    let optionList;
-    if ( dataSource == 'f0591'){
-      optionList   = await getOptionList( 'optionList_conceptoAll' );  
-      ol_Sector    = await getOptionList( 'optionList_sector' );  
-      ol_Subsector = await getOptionList( 'optionList_subsector' );  
-      ol_Entidad   = await getOptionList( 'optionList_entidad' );  
-    }
-    if ( dataSource == 'f0590'){
-      optionList = await getOptionList( 'optionList_tipoDato' ); 
-      _.each(optionList , function (element) {
-        $('#filterType')
-            .append($("<option></option>")
-                       // .attr("value", key)
-                       .text(element)); 
-      });
-    }
-    
+    let optionList   = await getOptionList( 'optionList_grupo' );  
+
     // configure jTable
     const td = await tableDefinition( dataSource , optionList ) ;
     // make jTable
@@ -42,10 +27,6 @@ async function documentReady(){
     $('#wrTableContainer').jtable('load');
 
     // filter event
-    // modificado el 2022-08-03
-    // se agrego el filtro por nombre
-    //$('#filterType' ).change(function() {
-
     $('.filterSelector' ).change(function() {
       $('#wrTableContainer').jtable('load', {
         tipo   : $('#filterType').val() , 
@@ -66,15 +47,19 @@ async function tableDefinition( $dataSource = false , $optionList){
       throw 'missing data source ';
     }
     // common configuration
+
+    const pageSizes = [10,15,25,50,100,250,500];
+
     rv = {
       columnResizable     : true,
       multiselect         : false,
       selecting           : false,
       selectingCheckboxes : false,
       paging              : true,
-      pageSize            : 10,
+      pageSizes           : pageSizes,
+      pageSize            : 15,
       sorting             : true,
-      defaultSorting      : 'nombre ASC',
+      defaultSorting      : 'orden,nombre ASC',
       actions             : {
         createAction        : '/ajax/crud03.php?action=create_' + $dataSource,
         listAction          : '/ajax/crud03.php?action=read_'   + $dataSource,
@@ -83,27 +68,28 @@ async function tableDefinition( $dataSource = false , $optionList){
       },
       ajaxSettings: {
         type: 'POST',
-        data: {user: '8855'}
+        data: {user: '8002'}
       },
       fields              : {
         id: {
           key    : true,
-          width  : '5%',
+          width  : '3%',
           create : false,
           edit   : false,
           title  : 'id',
           list   : true
-        },
-        nombre: {
-          title      : 'Nombre',
-          width      : '20%'   ,
-          inputClass : 'validate[required]'
         },
         orden: {
           title      : 'Orden',
           width      : '5%',
           inputClass : 'validate[required]'
         }, 
+        nombre: {
+          title      : 'Nombre',
+          width      : '15%'   ,
+          inputClass : 'validate[required]'
+        },
+
       }
       //Initialize validation logic when a form is created
       ,formCreated: function (event, data) {
@@ -147,100 +133,23 @@ async function tableDefinition( $dataSource = false , $optionList){
     };
     // data source switcher
     switch ( $dataSource ){
-      case 'f0590':
-        rv.defaultSorting = 'tipo, nombre ASC',
-        rv.title          = 'U.D.C.';
-        rv.fields.tipo    = {
-          title      : 'Tipo de Dato',
-          width      : '10%',
-          options    : $optionList,
-          inputClass : 'validate[required]'
-        };
-        rv.fields.titulo  = {
-          title      : 'Titulo',
+      case 'f0311':
+        rv.defaultSorting = 'orden, nombre ASC',
+        rv.title          = 'Canales de IPTV';
+        rv.fields.logo    = {
+          title      : 'Logo',
           width      : '15%',
         };
-        rv.fields.t1      = {
-          title      : 'T1',
-          width      : '5%',
+        rv.fields.url  = {
+          title      : 'URL',
+          width      : '50%',
         };
-        rv.fields.t2      = {
-          title      : 'T2',
-          width      : '5%',
-          create     : false,
-          edit       : false,
-        };
-        rv.fields.t3      = {
-          title      : 'T3',
-          width      : '5%',
-          create     : false,
-          edit       : false,
-        };
-        rv.fields.n1      = {
-          title      : 'N1',
-          width      : '5%',
-        };
-        rv.fields.n2      = {
-          title      : 'N2',
-          width      : '5%',
-          create     : false,
-          edit       : false,
-        };
-        rv.fields.n3      = {
-          title      : 'N3',
-          width      : '5%',
-          create     : false,
-          edit       : false,
+        rv.fields.grupo      = {
+          title      : 'Grupo',
+          width      : '7%',
         };
         break;
 
-      case 'f0591':
-        rv.title          = 'Planes de Gobierno';
-        //rv.defaultSorting = 'NOMBRE ASC';
-        rv.fields.concepto      = {
-          title      : 'Concepto',
-          width      : '10%',
-          //options    : '/ajax/crud059.php?action=optionList_concepto',
-          // options: { '1': 'Activa', '2': 'Inactiva' , '3': 'Terminada' },
-          options: $optionList,
-          inputClass : 'validate[required]'
-        };
-        rv.fields.sector      = {
-          title      : 'Sector',
-          width      : '10%',
-          //options    : '/ajax/crud059.php?action=optionList_concepto',
-          // options: { '1': 'Activa', '2': 'Inactiva' , '3': 'Terminada' },
-          options: ol_Sector,
-          inputClass : 'validate[required]'
-        };
-        rv.fields.subsector      = {
-          title      : 'Sub Sector',
-          width      : '10%',
-          //options    : '/ajax/crud059.php?action=optionList_concepto',
-          // options: { '1': 'Activa', '2': 'Inactiva' , '3': 'Terminada' },
-          options: ol_Subsector,
-          inputClass : 'validate[required]'
-        };
-        rv.fields.entidad      = {
-          title      : 'Entidad',
-          width      : '10%',
-          //options    : '/ajax/crud059.php?action=optionList_concepto',
-          // options: { '1': 'Activa', '2': 'Inactiva' , '3': 'Terminada' },
-          options: ol_Entidad,
-          inputClass : 'validate[required]'
-        };
-        rv.fields.ap      = {
-          title      : 'AP',
-          width      : '5%',
-          inputClass : 'validate[required]'
-        };
-        rv.fields.og      = {
-          title      : 'OG',
-          width      : '5%',
-          inputClass : 'validate[required]'
-        };
-  
-        break;
       default:
         throw 'invalid data source: ' + $source;
     }
@@ -269,7 +178,7 @@ async function getOptionList($source = false , $sort = 'nombre ASC'){
       body    : JSON.stringify( postParam ),
       cache   : 'no-cache'
     };
-    dataResponse = await fetch('/ajax/crud059.php' , options) ;
+    dataResponse = await fetch('/ajax/crud03.php' , options) ;
     dataJson     = await dataResponse.json() ;
 
     if ( dataJson.Result != 'OK' ) {
@@ -286,7 +195,4 @@ async function getOptionList($source = false , $sort = 'nombre ASC'){
     procesando('hide');
     return rv;
   }
-
-
 }
-

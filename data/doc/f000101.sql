@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `f000101`;
 CREATE TABLE `f000101` (
-  `id` int(10) UNSIGNED NOT NULL COMMENT 'PK',
+  `id` int UNSIGNED NOT NULL COMMENT 'PK' AUTO_INCREMENT ,
   `gId` varchar(250) NOT NULL,
   `gEmail` varchar(250) NOT NULL,
   `gName` varchar(250) NOT NULL,
@@ -39,13 +39,16 @@ CREATE TABLE `f000101` (
   `gNameFirst` varchar(250) NOT NULL,
   `gLocale` varchar(20) NOT NULL,
   `gAvatar` varchar(250) NOT NULL,
-  `gEmailVerified` tinyint(1) NOT NULL DEFAULT 1,
+  `gEmailVerified` tinyint NOT NULL DEFAULT 1,
   `status` char(2) DEFAULT NULL,
   `dateAdded` timestamp NOT NULL DEFAULT current_timestamp(),
   `dateLast` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `rol` tinyint(4) NOT NULL DEFAULT 0,
-    `remote` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
+  `rol` tinyint NOT NULL DEFAULT 0,
+    `remote` tinyint NOT NULL DEFAULT 0,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `gId` (`gId`),
+ UNIQUE KEY `gEmail` (`gEmail`)    
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `f000101`
@@ -57,27 +60,7 @@ INSERT INTO `f000101` (`id`, `gId`, `gEmail`, `gName`, `gNameLast`, `gNameFirst`
 (8002, '88888888888888888888', 'dp@wikired.com.ar', 'DP Automatic Process', 'Automatic Process', 'DP', 'es', 'https://dp.wikired.com.ar/data/res/img/user.png', 0, 'no', '2020-07-24 16:08:19', '2022-08-31 19:30:25', 0,  0)
 ;
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `f000101`
---
-ALTER TABLE `f000101`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gId` (`gId`),
-  ADD UNIQUE KEY `gEmail` (`gEmail`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `f000101`
---
-ALTER TABLE `f000101`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK', AUTO_INCREMENT=8003;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 

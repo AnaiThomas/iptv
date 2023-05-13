@@ -8,7 +8,7 @@ $head = array(
 
 $_loader_custom = array(
   'grid' => array(
-    'show' => true,
+    'show' => false,
     'css' => array(
     ),
   ),
@@ -37,7 +37,7 @@ $_navbar_custom = array(
   'navBrand' => array(
     'show' => true,
     'text' => $head['title'],
-    'home' => array('show' => true, 'href' => '/index.php'),
+    'home' => array('show' => false, 'href' => '/index.php'),
     'items' => array(
       'help' => array('show' => false, ),
     )

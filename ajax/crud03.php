@@ -14,39 +14,48 @@ $response=array(
 // Result Array
 $jTableResult['Result'] = "OK";
 
+//  set time elapsed
+$tIni = microtime(true);
+
 try {
-	//  set time elapsed
-	$tIni = microtime(true);
-
 	// parammeter management
+	$pageParams['show'] = true;		// for debug
 
-  	$pageParams = [];
+	$pageParams['hasData'] = false;
   	// post params
+
+	$postArray = array();
+
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if ( empty ($_POST) ){
-			$pageParams = json_decode(file_get_contents('php://input'), true); 
+			$postArray = json_decode(file_get_contents('php://input'), true); 
 		} else {
-			$pageParams['post'] = $_POST;
+			$postArray = $_POST;
 		}
-	} 
+		// validacion final
+		if (!empty($postArray) ){
+         $pageParams = array_merge($pageParams,$postArray);
+			$pageParams['hasData'] = true;
+      }
+   }
+
+
+
+
 	// get params
 	if ( !empty ($_GET)) {
 		foreach ($_GET as $key => $value) {
 			$pageParams[$key] =  $value ;
 		}
+		$pageParams['hasData'] = true;
 	}
 
-	$pageParams['show']         	= false;
-
 	// default values, just for tests
-	if ( !$pageParams ){
+	if ( !$pageParams['hasData'] ){
 		// default values, do not delete
-		
 		$pageParams['session']       	= $_SESSION['wr'][_appName];
-
 		// test values
-		$pageParams['action']         = 'read_p0590';
-		
+		$pageParams['action']         = 'read_f0311';
 	}
 
 	// parammeters validations
@@ -59,6 +68,7 @@ try {
 		$actionParam = $pageParams['action']  ;
 	}
 
+
 	// get table and action
 	$table  = _after('_' , $actionParam);
 	$action = _before('_' , $actionParam);
@@ -66,7 +76,7 @@ try {
 	// parametros opcionales
 	$sort = ' ORDER BY ';
 	if ( !array_key_exists('jtSorting', $pageParams) || empty($pageParams['jtSorting']) ){
-		$sort .= ('tipoDato' == $table) ? 'tipo , nombre ASC' : 'nombre ASC';
+		$sort .= ('tipoDato' == $table) ? 'orden , nombre ASC' : 'orden,nombre ASC';
 	} else {
 		$sort .= $pageParams['jtSorting']  ;
 	} 	
@@ -77,7 +87,7 @@ try {
 		$startIndex = $pageParams['jtStartIndex']  ;
 	} 		
 	if ( !array_key_exists('jtPageSize', $pageParams) || empty($pageParams['jtPageSize']) ){
-		$pageSize = 00;
+		$pageSize = 10;
 	} else {
 		$pageSize = $pageParams['jtPageSize']  ;
 	} 
@@ -100,7 +110,7 @@ try {
 	{	
 		$uid = $_SESSION['wr'][_appName]['uid'];
 	} else {
-		$uid = 8004;
+		$uid = 8002;
 	}
 
 	/* 
@@ -214,7 +224,7 @@ try {
 	  		$rowId = 0;
 	  		$resultado = array();
 	  		$fields  = 'SELECT ';
-	  		$fields .= ( $table == 'tipoDato') ? '' : 'id,';
+	  		$fields .= ( $table == 'tipoDato' || $table == 'grupo') ? '' : 'id,';
 	  		$fields .= 'nombre FROM '; 
 
 	  		$sort    = ' ORDER BY ';
@@ -222,10 +232,10 @@ try {
 	  		$sort    = ' nombre ';
 
 	  		$query = $fields . $table  . $sort ;
-	  		$resultType = ( $table == 'tipoDato') ? 3 : 0;
+	  		$resultType = ( $table == 'tipoDato' || $table == 'grupo') ? 3 : 0;
 	  		$rows = $db->get_results( $query , $resultType);
 
-	  		if ( $table == 'tipoDato' ){
+	  		if ( $table == 'tipoDato' || $table == 'grupo' ){
 				$jTableResult['Options'] = $rows;
 	  		} else {
 	  			foreach($rows as $row) {
@@ -270,7 +280,11 @@ try {
 
 // end Script
 if ( true === $pageParams['show'] ){
+	$response['session'] = $_SESSION;
+	$response['elapsed']  = sprintf('%.4f', (  microtime(true) -  $tIni)  ) . " segundos";
+	$jTableResult['response'] = $response; 
 	$jTableResult['params'] = $pageParams;
+
 	if ( isset($query) ){
 		$jTableResult['params']['query'] = $query;
 	}

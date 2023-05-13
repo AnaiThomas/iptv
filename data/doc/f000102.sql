@@ -31,14 +31,16 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `f000102`;
 CREATE TABLE `f000102` (
-  `id` int(10) UNSIGNED NOT NULL COMMENT 'PK',
+  `id` int UNSIGNED NOT NULL COMMENT 'PK'AUTO_INCREMENT ,
   `rms` char(30) NOT NULL COMMENT 'Selector',
   `rmv` varchar(120) NOT NULL COMMENT 'Hashed Validator',
-  `uid` int(10) UNSIGNED NOT NULL,
+  `uid` int UNSIGNED NOT NULL,
   `fexp` datetime NOT NULL,
   `falta` timestamp NOT NULL DEFAULT current_timestamp(),
-  `fmodi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;
+  `fmodi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `i_rmv` (`rmv`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Índices para tablas volcadas
