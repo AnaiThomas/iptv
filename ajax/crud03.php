@@ -19,28 +19,23 @@ $tIni = microtime(true);
 
 try {
 	// parammeter management
-	$pageParams['show'] = true;		// for debug
+	$showPageParams = true;		// for debug
 
 	$pageParams['hasData'] = false;
   	// post params
 
-	$postArray = array();
 
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if ( empty ($_POST) ){
-			$postArray = json_decode(file_get_contents('php://input'), true); 
+			$pageParams = json_decode(file_get_contents('php://input'), true); 
 		} else {
-			$postArray = $_POST;
+			$pageParams['post'] = $_POST;
 		}
 		// validacion final
-		if (!empty($postArray) ){
-         $pageParams = array_merge($pageParams,$postArray);
+		if (!empty($pageParams) ){
 			$pageParams['hasData'] = true;
       }
    }
-
-
-
 
 	// get params
 	if ( !empty ($_GET)) {
@@ -279,7 +274,7 @@ try {
 }
 
 // end Script
-if ( true === $pageParams['show'] ){
+if ( $showPageParams ){
 	$response['session'] = $_SESSION;
 	$response['elapsed']  = sprintf('%.4f', (  microtime(true) -  $tIni)  ) . " segundos";
 	$jTableResult['response'] = $response; 
