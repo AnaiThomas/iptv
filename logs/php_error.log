@@ -279,3 +279,27 @@ Stack trace:
 [13-May-2023 13:37:51 America/Argentina/Buenos_Aires] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in D:\0.dev\web\iptv\ajax\crud03.php on line 98
 [13-May-2023 13:37:51 America/Argentina/Buenos_Aires] PHP Stack trace:
 [13-May-2023 13:37:51 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] DB Error  La columna 'tipo' en where clause es desconocida
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] DB Error  select count(*) as nCount FROM f000102 WHERE tipo IS NOT NULL
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] DB Error  La columna 'tipo' en where clause es desconocida
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] DB Error  SELECT * FROM f000102 WHERE tipo IS NOT NULL ORDER BY orden ASC,nombre ASC LIMIT 0,25
+[26-May-2023 20:20:16 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[26-May-2023 20:21:30 America/Argentina/Buenos_Aires] DB Error  La columna 'tipo' en where clause es desconocida
+[26-May-2023 20:21:30 America/Argentina/Buenos_Aires] DB Error  SELECT * FROM f000102 WHERE tipo IS NOT NULL ORDER BY orden ASC,nombre ASC LIMIT 0,25
+[26-May-2023 20:21:30 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: matrix in D:\0.dev\web\iptv\ajax\crud03.php on line 260
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP Stack trace:
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP Warning:  Invalid argument supplied for foreach() in D:\0.dev\web\iptv\ajax\crud03.php on line 260
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP Stack trace:
+[26-May-2023 21:17:43 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: matrix in D:\0.dev\web\iptv\ajax\crud03.php on line 260
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP Stack trace:
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP Warning:  Invalid argument supplied for foreach() in D:\0.dev\web\iptv\ajax\crud03.php on line 260
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP Stack trace:
+[26-May-2023 21:18:00 America/Argentina/Buenos_Aires] PHP   1. {main}() D:\0.dev\web\iptv\ajax\crud03.php:0
+[26-May-2023 22:16:51 America/Argentina/Buenos_Aires] DB Error  Algo está equivocado en su sintax cerca '-15,15' en la linea 1
+[26-May-2023 22:16:51 America/Argentina/Buenos_Aires] DB Error  SELECT * FROM f0311 WHERE tipo IS NOT NULL ORDER BY orden ASC, nombre ASC LIMIT -15,15
+[26-May-2023 22:16:51 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------

@@ -51,6 +51,10 @@ try {
 		$pageParams['session']       	= $_SESSION['wr'][_appName];
 		// test values
 		$pageParams['action']         = 'read_f0311';
+		$pageParams['jtStartIndex']   = 0;
+		$pageParams['jtPageSize']     = 25;
+		$pageParams['jtSorting']      = 'orden ASC,nombre ASC';
+		$pageParams['user']           = 8002;
 	}
 
 	// parammeters validations
@@ -242,20 +246,24 @@ try {
   			break;
   		case 'read':
 			//Get record count
-
 			$recordCount = $db->count_rows( $table , $filterType );
-			$query = 'SELECT * FROM ' . $table  . $filterType . $sort . $limit;
-			$rows = $db->get_results( $query );
-			//Return result to jTable
 			$jTableResult['TotalRecordCount'] = $recordCount;
-			$jTableResult['Records'] = $rows;
-         break;
 
 			$response['data']   = array() ;
-
-			foreach ($matrix as $key => $value) {
-				$response['data'][] = $value;
+			if (empty($recordCount) ){
+				$jTableResult['Records'] = null;
+			} else {
+				$query = 'SELECT * FROM ' . $table  . $filterType . $sort . $limit;
+				$rows = $db->get_results( $query );
+				//Return result to jTable
+				$jTableResult['Records'] = $rows;
+				// foreach ($matrix as $key => $value) {
+				// 	$response['data'][] = $value;
+				// }
 			}
+         break;
+
+
   		break;
 
 
@@ -266,7 +274,7 @@ try {
 
   	// OK
   	// 
-  	// $response['status'] 		= 'ok'; 
+  	$response['status'] 		= 'ok'; 
   	$jTableResult['Result'] = 'OK'; 
 } catch (Exception $ex) {
 	$jTableResult['Result'] = "ERROR";
