@@ -303,3 +303,26 @@ Stack trace:
 [26-May-2023 22:16:51 America/Argentina/Buenos_Aires] DB Error  Algo está equivocado en su sintax cerca '-15,15' en la linea 1
 [26-May-2023 22:16:51 America/Argentina/Buenos_Aires] DB Error  SELECT * FROM f0311 WHERE tipo IS NOT NULL ORDER BY orden ASC, nombre ASC LIMIT -15,15
 [26-May-2023 22:16:51 America/Argentina/Buenos_Aires] ----------------------------------------------------------------------------------------------------
+[30-May-2023 16:50:15 America/Argentina/Buenos_Aires] PHP Warning:  require(C:/dev/web/iptv/libs/google/api-php-client/v241/vendor/autoload.php): Failed to open stream: No such file or directory in C:\dev\web\iptv\ajax\validar.php on line 72
+[30-May-2023 16:50:15 America/Argentina/Buenos_Aires] PHP Stack trace:
+[30-May-2023 16:50:15 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\ajax\validar.php:0
+[30-May-2023 16:50:15 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/dev/web/iptv/libs/google/api-php-client/v241/vendor/autoload.php' (include_path='.;C:\php\pear') in C:\dev\web\iptv\ajax\validar.php:72
+Stack trace:
+#0 {main}
+  thrown in C:\dev\web\iptv\ajax\validar.php on line 72
+[30-May-2023 16:55:47 America/Argentina/Buenos_Aires] PHP Warning:  require(C:/dev/web/iptv/libs/google/php-client/v2.15.0/php8./vendor/autoload.php): Failed to open stream: No such file or directory in C:\dev\web\iptv\ajax\validar.php on line 72
+[30-May-2023 16:55:47 America/Argentina/Buenos_Aires] PHP Stack trace:
+[30-May-2023 16:55:47 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\ajax\validar.php:0
+[30-May-2023 16:55:47 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/dev/web/iptv/libs/google/php-client/v2.15.0/php8./vendor/autoload.php' (include_path='.;C:\php\pear') in C:\dev\web\iptv\ajax\validar.php:72
+Stack trace:
+#0 {main}
+  thrown in C:\dev\web\iptv\ajax\validar.php on line 72
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP Warning:  Undefined variable $id_token in C:\dev\web\iptv\ajax\validar.php on line 80
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP Stack trace:
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\ajax\validar.php:0
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP Warning:  Undefined array key "status_message" in C:\dev\web\iptv\ajax\validar.php on line 92
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP Stack trace:
+[30-May-2023 16:56:55 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\ajax\validar.php:0
+[30-May-2023 16:57:13 America/Argentina/Buenos_Aires] PHP Warning:  Undefined array key "status_message" in C:\dev\web\iptv\ajax\validar.php on line 92
+[30-May-2023 16:57:13 America/Argentina/Buenos_Aires] PHP Stack trace:
+[30-May-2023 16:57:13 America/Argentina/Buenos_Aires] PHP   1. {main}() C:\dev\web\iptv\ajax\validar.php:0

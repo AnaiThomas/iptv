@@ -23,8 +23,6 @@ try {
 
 	$pageParams['hasData'] = false;
   	// post params
-
-
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if ( empty ($_POST) ){
 			$pageParams = json_decode(file_get_contents('php://input'), true); 
